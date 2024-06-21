@@ -1,0 +1,138 @@
+/* src/components/NavBar.css */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #0d0d0d;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 6px;
+  transition: 0.3s;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo img {
+  width: 62.5px;
+  height: 62.5px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.navbar-logo span {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: white;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin: 0 3px;
+}
+
+.nav-item a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.16rem;
+  font-weight: bold; /* Make the font bold */
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  border: 2px solid transparent; /* Add border */
+}
+
+.nav-item a:hover {
+  background-color: #111;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add box-shadow */
+  transform: scale(1.05); /* Slightly increase size */
+}
+
+/* Specific style for the "Contact Me" button */
+.nav-item .contact-button {
+  background-color: #007bff; /* Bootstrap primary blue */
+  border: 1px solid #007bff;
+  color: white;
+  padding: 7px 14px;
+  font-size: 1.16rem;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.nav-item .contact-button:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.nav-social-icons {
+  display: flex;
+  align-items: center;
+}
+
+.nav-social-icons a {
+  color: white;
+  font-size: 1.5rem;
+  margin-left: 15px;
+  transition: color 0.3s;
+}
+
+.nav-social-icons a:hover {
+  color: #0077b5; /* Change this to match the social media color */
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+  .nav-menu {
+    position: absolute;
+    top: 60px;
+    left: -100%;
+    width: 54%;
+    height: calc(50vh - 30px);
+    background-color: #0d0d0d;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: left 0.3s;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-item {
+    margin: 20px 0;
+  }
+
+  .nav-item a {
+    font-size: 1.5rem;
+  }
+}

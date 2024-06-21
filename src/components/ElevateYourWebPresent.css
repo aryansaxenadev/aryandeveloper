@@ -1,0 +1,17 @@
+.banner {
+  background-color: #7d8894; /* Use a color similar to the background in the image */
+  text-align: center;
+  padding: 25px;
+}
+
+.banner-title {
+  font-size: 2em;
+  color: white;
+  margin: 0;
+}
+
+.banner-subtitle {
+  font-size: 1.2em;
+  color: white;
+  margin: 0;
+}

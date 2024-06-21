@@ -1,0 +1,58 @@
+/* src/components/Divider.css */
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px; /* Adjusted height for better visibility */
+  position: relative;
+  background: linear-gradient(135deg, #00274d, #003366); /* Dark blue gradient background */
+  padding: 10px; /* Added padding for space around the lines */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.line {
+  height: 2px;
+  background: #028c52; /* White color for contrast */
+  flex: 1;
+  margin: 0 1.5rem; /* Adjusted margin */
+  position: relative;
+}
+
+.line::before,
+.line::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #6e06ff;
+}
+
+.line::before {
+  left: -20px; /* Adjusted position */
+}
+
+.line::after {
+  right: -20px; /* Adjusted position */
+}
+
+.icon-container {
+  background-color: #fff; /* White background for the icon */
+  padding: 0.4rem; /* Slightly larger padding */
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+  position: relative;
+  z-index: 1; /* Bring icon to the front */
+  transition: transform 0.3s, background-color 0.3s; /* Add transition */
+}
+
+
+
+.divider-icon {
+  font-size: 1.5rem; /* Adjust icon size */
+  color: #00c6ff; /* Theme color for contrast with dark blue background */
+  transition: color 0.3s; /* Add transition */
+}
+
+

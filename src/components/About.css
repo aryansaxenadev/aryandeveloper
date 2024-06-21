@@ -1,0 +1,163 @@
+/* About section container */
+.about {
+  padding: 2rem 1rem; /* Padding for breathing space */
+  background-color: #101f33; /* Dark background */
+  color: #f8f8f8; /* Light text color */
+  border-radius: 10px;
+  margin: 2rem auto; /* Center the section */
+  max-width: 1200px; /* Limit the width */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+  text-align: center; /* Center the heading */
+  opacity: 0; /* Start hidden for animation */
+  transform: translateY(50px); /* Start slightly off-screen */
+  transition: opacity 1s ease-out, transform 1s ease-out;
+  height: 95vh;
+}
+
+.about.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* About section heading */
+.about-heading {
+  font-size: 3rem;
+  font-weight: 700; /* Bold */
+  margin-bottom: 1rem;
+  text-align: center;
+  color: white;
+  opacity: 0; /* Start hidden for animation */
+  transform: translateY(-50px); /* Start slightly off-screen */
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.about.animate .about-heading {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Wrapper for image and content */
+.about-content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row; /* Align content horizontally */
+  gap: 2rem;
+  opacity: 0; /* Start hidden for animation */
+  transform: translateY(50px); /* Start slightly off-screen */
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.about.animate .about-content-wrapper {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Image container */
+.about-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  opacity: 0; /* Start hidden for animation */
+  transform: translateX(-50px); /* Start slightly off-screen */
+  transition: opacity 2.8s ease-out, transform 2.8s ease-out;
+}
+
+.about.animate .about-image-container {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Keyframes for floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Profile image */
+.about-profile-pic {
+  max-width: 18rem;
+  height: auto;
+  border-radius: 50%; /* Circular image */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+  transition: transform 0.3s ease; /* Smooth transformation */
+  animation: float 3s ease-in-out infinite; /* Apply floating animation */
+}
+
+.about-profile-pic:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Content container */
+.about-content {
+  flex: 2;
+  padding: 1rem 2rem;
+  text-align: left; /* Align text to the left */
+  opacity: 0; /* Start hidden for animation */
+  transform: translateX(50px); /* Start slightly off-screen */
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.about.animate .about-content {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.about-content p {
+  font-size: 1.25rem;
+  line-height: 1.6; /* Improved readability */
+  margin-bottom: 1rem;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.about-content p:hover {
+  color: #aed6f1; /* Change text color on hover */
+}
+
+/* Existing styles... */
+
+@media (max-width: 992px) {
+  .about-content-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image-container,
+  .about-content {
+    margin-bottom: 2rem;
+  }
+  .about{
+    width: 77%;
+  }
+
+  .about-content {
+    text-align: center;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-heading {
+    font-size: 2rem;
+  }
+
+  .about-profile-pic {
+    max-width: 60%;
+  }
+
+  .about-content p {
+    font-size: 1rem;
+  }
+  .about{
+    height: 148vh;
+  }
+}
